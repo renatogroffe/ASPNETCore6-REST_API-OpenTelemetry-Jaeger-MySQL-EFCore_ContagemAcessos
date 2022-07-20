@@ -1,0 +1,13 @@
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "6831:6831/udp"
+      - "16686:16686"
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "MySql2022!"
+      MYSQL_DATABASE: "basecontagem"
+    ports:
+      - "3306:3306"
